@@ -1,22 +1,29 @@
-package HomeWork;
+package ClassWork;
 
 public class Q6 {
 
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
-		int[] a= {1,2,3,4,5,6,7,8,9};
-		int i=0,j=a.length-1;
-		while(i<j)
+		int [][] a= {{1,2,3},
+					 {1,2,3},
+					 {1,2,3}};
+		int [][] b=new int[a.length][a.length];
+		for (int i = 0; i < a.length; i++) 
 		{
-			a[i]=a[i]*a[j];
-			a[j]=a[i]/a[j];
-			a[i]=a[i]/a[j];
-			i++;j--;
+			for (int j = 0; j < a[i].length; j++)
+			{
+				b[j][i]=a[i][j];
+			}
 		}
-		for (int j2 = 0; j2 < a.length; j2++)
+		for (int i = 0; i < b.length; i++) 
 		{
-			System.out.print(a[j2]+" ");
+			for (int j = 0; j < b[i].length; j++)
+			{
+				System.out.print(b[i][j]+" ");
+			}
+			System.out.println();
 		}
+		
 	}
 
 }

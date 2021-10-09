@@ -1,10 +1,10 @@
 package ClassWork;
 
-public class Q8 {
+public class Q9 {
 
 	public static void main(String[] args)
 	{
-		Stack s=new Stack();
+		Queue s=new Queue();
 		s.push(1);
 		s.print();
 		s.push(2);
@@ -21,7 +21,6 @@ public class Q8 {
 		s.print();
 		System.out.println(s.pop());
 		s.print();
-		
 	}
 
 }

@@ -1,26 +1,25 @@
-package HomeWork;
+package ClassWork;
 
 public class Q3 {
 
 	public static void main(String[] args)
 	{
-		int [] a= {1,2,3,4,5};
-		int c=0,num=3;
+		int a[] = {3,5,2,1,6,9,7,4,8};
 		for (int i = 0; i < a.length; i++)
 		{
-			if(a[i]==num)
-				c++;
+			int min=i;
+			for (int j = i+1; j < a.length; j++)
+			{
+				if(a[min]>a[j])
+					min=j;
+			}
+			int temp=a[i];
+			a[i]=a[min];
+			a[min]=temp;
 		}
-		int b[]= new int[a.length-c];
-		int index=0;
-		for (int i = 0; i < a.length; i++) 
+		for (int i = 0; i < a.length; i++)
 		{
-			if(a[i]!=num)
-				b[index++]=a[i];
-		}
-		for (int i = 0; i < b.length; i++) 
-		{
-			System.out.print(b[i]+" ");
+			System.out.print(a[i]+" ");
 		}
 	}
 
